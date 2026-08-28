@@ -1,0 +1,84 @@
+/* Arquivo de Sessão — base editorial: papel quente, grafite, azul-petróleo e vermelho alizarina. */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "DM Serif Display", Georgia, serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius: 0px;
+}
+
+:root {
+  --background: #F6F1E7;
+  --foreground: #20221E;
+  --card: #FFFCF5;
+  --card-foreground: #20221E;
+  --popover: #FFFCF5;
+  --popover-foreground: #20221E;
+  --primary: #143B3D;
+  --primary-foreground: #F9F4EA;
+  --secondary: #E8E0D3;
+  --secondary-foreground: #143B3D;
+  --muted: #EAE4D8;
+  --muted-foreground: #686860;
+  --accent: #E8E0D3;
+  --accent-foreground: #143B3D;
+  --destructive: #D84A3B;
+  --destructive-foreground: #FFFFFF;
+  --border: #D6D0C4;
+  --input: #CFC8BB;
+  --ring: #D84A3B;
+}
+
+* { border-color: var(--border); }
+
+html { background: var(--background); }
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background-color: var(--background);
+  background-image: url('/manus-storage/arquivo-sessao-pattern_65a8fd4b.jpg');
+  background-size: 920px auto;
+  color: var(--foreground);
+  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+}
+
+button, input, textarea { font: inherit; }
+
+button:not(:disabled), [role="button"]:not([aria-disabled="true"]), [type="button"]:not(:disabled), [type="submit"]:not(:disabled), [type="reset"]:not(:disabled), a[href], select:not(:disabled), input[type="checkbox"]:not(:disabled), input[type="radio"]:not(:disabled) { cursor: pointer; }
+
+.font-display { font-family: "DM Serif Display", Georgia, serif; }
+
+.page-enter { animation: page-enter 280ms cubic-bezier(0.23, 1, 0.32, 1) both; }
+
+@keyframes page-enter {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+}
